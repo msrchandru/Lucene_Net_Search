@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SearchingTextinDB.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+         <asp:HyperLink ID="hyperlink1" NavigateUrl="http://dminc.com/" Target="_blank"
+                                runat="server">
+                                <asp:Image  ID="Image1" align="left" runat="server" ImageUrl="Images/Logo2.png" style="width:160px; height:70px; padding:10px 10px 10px 10px;" />  
+                       
+                            </asp:HyperLink> 
+            <div class="title" style="vertical-align:middle;padding-left: 140px;">
+            
+                <h1 style="color: #177D9E; ">
+                  Indexing Lucene.Net
+                </h1>
+            </div>
+            <div class="loginDisplay">
+               <%-- <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>--%>
+                <asp:HyperLink ID="hyperlink2" NavigateUrl="http://www.novartis.com/" Target="_blank"
+                                runat="server">
+                                <asp:Image ID="Image3" runat="server" CssClass="login-logo" ImageUrl="Images/novartis.gif" style="padding:7px 7px 7px 7px;"
+                                    BorderStyle="Solid" />                             
+                            </asp:HyperLink>               
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                     <%--   <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>--%>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <%-- <asp:HyperLink ID="hyperlink1" NavigateUrl="http://dminc.com/" Target="_blank"
+                                runat="server">
+                                <asp:Image  ID="Image1" align="right" runat="server" ImageUrl="Images/Logo2.png" style="width:100px; height:50px; padding-right:20px; padding-bottom:20px;" />  
+                       
+                            </asp:HyperLink>     --%>
+    </div>
+    </form>
+</body>
+</html>
